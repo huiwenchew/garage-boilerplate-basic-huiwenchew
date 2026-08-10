@@ -1,4 +1,5 @@
 import { Router, type Router as ExpressRouter } from 'express'
+import { notesRouter } from './notes'
 
 const router: ExpressRouter = Router()
 
@@ -8,3 +9,4 @@ const router: ExpressRouter = Router()
 //   router.use('/users', usersRouter)
 
 export { router as apiRouter }
+router.use('/notes', notesRouter)
